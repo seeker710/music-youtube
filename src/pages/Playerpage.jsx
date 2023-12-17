@@ -10,7 +10,6 @@ import SidePanel from '../components/playerpager-components/SidePanel';
 import PlayerBar from '../components/playerpager-components/PlayerBar';
 // change
 import axios from 'axios';
-import { KEY, HOST } from '../Constant';
 
 const Playerpage = () => {
 
@@ -19,8 +18,8 @@ const Playerpage = () => {
     const navigate = useNavigate();
     const config = {
         headers: {
-            'X-RapidAPI-Key': KEY,
-            'X-RapidAPI-Host': HOST,
+            'X-RapidAPI-Key': import.meta.env.VITE_KEY,
+            'X-RapidAPI-Host': import.meta.env.VITE_HOST,
         }
     }
     useEffect(() => {

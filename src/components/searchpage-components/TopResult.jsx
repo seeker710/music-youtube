@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 // import components
 import useAppState from '../../context/AppState';
-import { KEY, HOST } from '../../Constant';
 // import assets
 import { IoMdPlay } from 'react-icons/io';
 
@@ -32,8 +31,8 @@ const TopResult = ({ songData }) => {
     const navigate = useNavigate();
     const config = {
         headers: {
-            'X-RapidAPI-Key': KEY,
-            'X-RapidAPI-Host': HOST,
+            'X-RapidAPI-Key': import.meta.env.VITE_KEY,
+            'X-RapidAPI-Host': import.meta.env.VITE_HOST,
         }
     }
     const clickHandler = async () => {

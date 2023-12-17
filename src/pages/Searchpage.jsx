@@ -8,7 +8,6 @@ import Navbar from '../components/homepage-components/Navbar';
 import TopResult from '../components/searchpage-components/TopResult';
 import Result from '../components/searchpage-components/Result';
 // change
-import { KEY, HOST } from '../Constant';
 import axios from 'axios';
 
 const Searchpage = () => {
@@ -27,8 +26,8 @@ const Searchpage = () => {
             numberOfTopResults: '5'
         },
         headers: {
-            'X-RapidAPI-Key': KEY,
-            'X-RapidAPI-Host': HOST,
+            'X-RapidAPI-Key': import.meta.env.VITE_KEY,
+            'X-RapidAPI-Host': import.meta.env.VITE_HOST,
         }
     }
     useEffect(() => {
